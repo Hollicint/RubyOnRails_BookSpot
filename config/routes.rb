@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :books
-  root "home#index"
+  root to: "home#index"
 
   get 'home/contact'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
