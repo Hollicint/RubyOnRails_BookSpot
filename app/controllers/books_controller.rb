@@ -6,14 +6,12 @@ class BooksController < ApplicationController
 
   # GET /books or /books.json
   def index
-
-    #Creating instance of repository
+    # Creating instance of repository
     # @book_repository = BookRepository.new
 
     # Uses repository to get books
     @books = @book_repository.all
-        # @books = Book.all
-
+    # @books = Book.all
   end
 
   # GET /books/1 or /books/1.json
@@ -31,11 +29,11 @@ class BooksController < ApplicationController
 
   # POST /books or /books.json
   def create
-   # @book = Book.new(book_params)
+    # @book = Book.new(book_params)
 
-   # new repository instance
-   # @book_repository =BookRepository.new
-   # create new book with repository
+    # new repository instance
+    # @book_repository =BookRepository.new
+    # create new book with repository
     @book = @book_repository.create(book_params)
 
     respond_to do |format|
@@ -52,10 +50,10 @@ class BooksController < ApplicationController
   # PATCH/PUT /books/1 or /books/1.json
   def update
     # new repository instance
-   # @book_repository =BookRepository.new
+    # @book_repository =BookRepository.new
 
     respond_to do |format|
-      #if @book.update(book_params)
+      # if @book.update(book_params)
       # repository updates the book
       if @book_repository.update(@book, book_params)
         format.html { redirect_to @book, notice: "Book was successfully updated." }
@@ -69,7 +67,7 @@ class BooksController < ApplicationController
 
   # DELETE /books/1 or /books/1.json
   def destroy
-   # @book.destroy!
+    # @book.destroy!
 
     # new repository instance
     # @book_repository =BookRepository.new
@@ -85,15 +83,15 @@ class BooksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_book
-      #@book = Book.find(params.expect(:id))
-      #located book by id
+      # @book = Book.find(params.expect(:id))
+      # located book by id
       @book = Book.find(params[:id])
     end
 
-    #initializes the repository at the before_action line at the top of the page
+    # initializes the repository at the before_action line at the top of the page
     def set_repository
-      @book_repository = BookRepository.new 
-    end  
+      @book_repository = BookRepository.new
+    end
 
     # Only allow a list of trusted parameters through.
     def book_params
