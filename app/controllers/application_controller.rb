@@ -8,5 +8,5 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # ** to readd the login remove the comment below #
-  #  before_action :authenticate_user!
+  # before_action :authenticate_user!
 end
