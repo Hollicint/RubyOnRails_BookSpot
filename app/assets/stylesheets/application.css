@@ -10,10 +10,47 @@
  */
 body
 {
-  background-color:azure;
+  background-color:#FEFBF6;
 }
 
-#footerClass {
+.contactContainer
+{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.headnav
+{
+  background-color: #704264;
+  color: #f2f2f2;
+}
+
+.bookcollection
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: space-around;
+  border: 5px solid black;
+}
+
+.bookContent
+{
+  border: 2px solid #333;
+  padding: 20px; 
+  margin: 10px;
+}
+
+.formContainer
+{
+  border-radius: 5px;
+ 
+  padding: 20px;
+}
+
+.footnav {
     flex-shrink: 0;
-    
+    background-color: #B6A28E;
   }
+
