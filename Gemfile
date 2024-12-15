@@ -19,7 +19,9 @@ gem "jbuilder"
 
 # Authentication Library
 gem "devise"
-
+# simple form gem
+gem "simple_form"
+# gems need to updated for allowing testing enviroment to connect
 gem 'nokogiri', '~> 1.15.7'
 gem 'rails-html-sanitizer', '~> 1.6'
 
@@ -49,7 +51,7 @@ gem "thruster", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
-
+  # added gems to help with testing and CICD 
   gem "bundler-audit"
   gem "ruby_audit"
   gem "pg"

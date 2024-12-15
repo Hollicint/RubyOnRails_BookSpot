@@ -2,17 +2,25 @@
 
 <% content_for :title, "Books" %>
 
-<h1>Books</h1>
+<title>Books</title>
+<h3> Marvell at your Greatness </h3>
+<p>
+
+It doesnt matter the size of the book, you have made the effect, why not add your read book to the list. <br>
+<%= link_to "Add ", new_book_path %> another book to your Collection
+</P>
+<br>
+
 
 <div >
   <% @books.each do |book| %>
     <%= render book  %>
     <p>
-      <%= link_to "Show this book", book %>
+      <%= link_to "view", book %> this book
     </p><br>
   <% end %>
 </div>
 <br>
-<%= link_to "New book", new_book_path %>
+
 
 

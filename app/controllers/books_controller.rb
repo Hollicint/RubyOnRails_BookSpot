@@ -14,20 +14,20 @@ class BooksController < ApplicationController
     # @books = Book.all
   end
 
-  # GET /books/1 or /books/1.json
+  # show 
   def show
   end
 
-  # GET /books/new
+  # new 
   def new
     @book = Book.new
   end
 
-  # GET /books/1/edit
+  # edit 
   def edit
   end
 
-  # POST /books or /books.json
+  # create 
   def create
     # @book = Book.new(book_params)
 
@@ -47,7 +47,7 @@ class BooksController < ApplicationController
     end
   end
 
-  # PATCH/PUT /books/1 or /books/1.json
+  #  update 
   def update
     # new repository instance
     # @book_repository =BookRepository.new
@@ -65,7 +65,7 @@ class BooksController < ApplicationController
     end
   end
 
-  # DELETE /books/1 or /books/1.json
+  # DELETE 
   def destroy
     # @book.destroy!
 

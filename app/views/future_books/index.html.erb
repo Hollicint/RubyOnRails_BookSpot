@@ -1,0 +1,53 @@
+<title>Need to Read Books</title>
+
+<%= form_with model: @future_book, url: future_books_path, local: true do |form| %>
+    <% if @future_book.errors.any? %>
+      <div class="errors">
+        <h2>Errors:</h2>
+        <ul>
+          <% @future_book.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </div>
+  
+    <div>
+      <%= form.label :author %><br>
+      <%= form.text_field :author %>
+    </div>
+  
+    <div>
+      <%= form.label :status %><br>
+      <%= form.text_field :status %>
+    </div>
+    <div>
+    <%= form.label :note %><br>
+    <%= form.text_field :note %>
+  </div>
+    <br>
+    <div>
+      <%= form.submit 'Add Book to List' %>
+    </div>
+  <% end %>
+  
+ 
+  <br>
+  <h3>The one place to store your need to Books List</h3>
+  <p> We dont judge at Book Spot no matter how long a book has been on your list </p>
+  <p> Please Refresh Page if book doesnt appear below</p>
+  <br>
+  <ul>
+    <% @future_books.each do |book| %>
+      <li>
+        <%= book.title %> by <%= book.author %> |
+         Status: <%= book.status %> |
+        <%= "  Note: #{book.note}" if book.note.present? %>
+       </li>
+    <% end %>
+  </ul>

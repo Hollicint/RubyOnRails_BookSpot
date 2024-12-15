@@ -1,0 +1,2 @@
+module FutureBooksHelper
+end
