@@ -22,7 +22,7 @@ gem "devise"
 # simple form gem
 gem "simple_form"
 # gems need to updated for allowing testing enviroment to connect
-gem 'nokogiri', '~> 1.15.7'
+gem 'nokogiri', '~> 1.18.0'
 gem 'rails-html-sanitizer', '~> 1.6'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
